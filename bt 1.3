@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+struct Diem
+{
+    float a;
+    float b;
+};
+typedef struct Diem DIEM;
+void NhapDiem(DIEM &);
+void XuatDiem(DIEM);
+void NhapDiem(DIEM &d)
+{
+    float temp;
+    printf("\nNhap a: ");
+    scanf("%f", &temp);
+    d.a = temp;
+    printf("\nNhap b: ");
+    scanf("%f", &temp);
+    d.b = temp;
+}
+void XuatDiem(DIEM d)
+{
+    printf("(%8.3f, %8.3f)", d.a, d.b);
+}
+int main()
+{
+    DIEM d;
+    NhapDiem(d);
+    XuatDiem(d);
+    getch();
+    return 0;
+}
